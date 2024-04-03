@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000000;
+}
+body {
+  margin: 0px;
+
+  background-image: linear-gradient(
+    to right bottom,
+    #fff7ad,
+    #ffdda1,
+    #ffc2af,
+    #ffafd0,
+    #ffaaf8
+  );
+}
+
+/* navigation styling */
+
+body nav {
+  width: 100%;
+  height: 60px;
+  background-color: #ff7171;
+  font-size: large;
+}
+
+body nav ul {
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+body nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+body nav ul li a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+.checkbtn {
+  color: var(--black-color);
+  float: right;
+  margin-top: 10px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+body nav .checkbtn i img {
+  width: 30px;
+  height: 30px;
+}
+
+/* .content1 started */
+
+body main {
+  display: flex;
+  justify-content: space-between;
+}
+
+body main .content1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 80px;
+}
+
+body main .content1 h1 {
+  text-align: left;
+  /* margin-left: 0; */
+  padding: 50px 0 25px 0;
+  max-width: 100%;
+  font-size: 2.5em;
+
+  letter-spacing: 3px;
+}
+body main .content1 p {
+  text-align: left;
+  /* margin-left: 0; */
+  padding: 25px 0 25px 0;
+  max-width: 100%;
+  font-size: x-large;
+}
+
+body main .image img {
+  width: 42vw;
+  height: 100vh;
+}
+
+body main .content1 button {
+  background-color: #ff7171;
+
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+body main .content1 .btn {
+  padding: 25px 0;
+}
+
+body main .content1 button:hover {
+  background-color: #ff7171;
+}
+
+/* .content2 started */
+
+body .content2 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.content2 .main-left {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+}
+
+.content2 .main-left .left-part1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+body .content2 .main-left .left-part1 img {
+  width: 18vw;
+  height: 31vh;
+}
+
+body .content2 .main-left .left-part2 img {
+  width: 18vw;
+  height: 63.7vh;
+  display: flex;
+}
+
+body .content2 .main-right {
+  margin-left: 100px;
+  height: 36vh;
+  width: 28vw;
+
+  padding: 26px;
+  background-color: #ff7171;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+body .content2 .main-right h1 {
+  font-size: 2rem;
+  letter-spacing: 4px;
+  padding: 10px 0px;
+}
+
+body .content2 .main-right .right-name {
+  display: flex;
+  flex-direction: row;
+  font-size: large;
+  gap: 12px;
+}
+body .content2 .main-right .right-name img {
+  width: 25px;
+  height: 20px;
+}
+
+/* media quries started for tablet */
+
+@media (max-width: 778px) {
+  /* navigation */
+  .checkbtn {
+    display: block;
+  }
+  body nav ul {
+    position: fixed;
+    width: 100%;
+    height: 300px;
+    background: #ff7171;
+    top: 60px;
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  body main {
+    flex-direction: column;
+    display: flex;
+  }
+  body main .content1 {
+    padding: 20px 30px 20px 30px;
+  }
+
+  body main .image {
+    display: flex;
+    justify-content: center;
+  }
+
+  body main .image img {
+    width: 80vw;
+    height: 70vh;
+  }
+
+  body .content2 {
+    flex-direction: column;
+  }
+  body .content2 .main-left .left-part1 img {
+    width: 38vw;
+  }
+  body .content2 .main-left .left-part2 img {
+    width: 38vw;
+  }
+  body .content2 .main-right {
+    width: 80vw;
+    height: 32vh;
+    margin-left: 0;
+  }
+}
+
+/* media quries started for Mobile */
+
+@media (max-width: 428px) {
+  body main .image img {
+    height: 50vh;
+  }
+
+  body .content2 .main-left {
+    gap: 18px;
+  }
+
+  body .content2 .main-left .left-part1 img {
+    width: 38vw;
+    height: 20vh;
+  }
+  body .content2 .main-left .left-part2 img {
+    width: 38vw;
+    height: 41.8vh;
+  }
+
+  body .content2 .main-right {
+    width: 80vw;
+  }
+  
+}
